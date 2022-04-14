@@ -27,13 +27,24 @@ export default function ProfilePage() {
                         <ProfileImage />
                     </div>
                     <div className="lg:col-span-3 border-b border-r border-gray-200">
-                        <div className="py-6 px-12">
-                            <ProfileName></ProfileName>
-                            <div className="pt-1"></div>
-                            <ProfileLocation />
-                            <ProfileLanguages></ProfileLanguages>
-                            <div className="pt-4"></div>
-                            <SkillList />
+                        <div className="flex items-start">
+                            <div className="flex-1 py-6 pl-10 pr-2">
+                                <ProfileName></ProfileName>
+                                <div className="pt-1"></div>
+                                <ProfileLocation />
+                                <ProfileLanguages></ProfileLanguages>
+                                <div className="pt-4"></div>
+                                <SkillList />
+                            </div>
+                            <div className="py-6 pr-6 pl-2">
+                                <div className="flex items-center">
+                                    <button className="bg-black text-white py-2 px-4 text-xs font-semibold tracking-wide uppercase rounded-full mr-1">Save Profile</button>
+                                    <button className="bg-gray-300 text-white py-2 px-4 text-xs font-semibold tracking-wide uppercase rounded-full">Publish Profile</button>
+                                </div>
+                                <div className="mt-2">
+                                    <div className="text-sm text-gray-300">(You can only publish a completed profile)</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <PodWithList

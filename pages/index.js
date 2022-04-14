@@ -2,7 +2,10 @@ import clsx from 'clsx';
 import React from 'react'
 import Pod from '../components/Pod';
 import PodWithList from '../components/PodWithList';
-import PodWithProfileImage from '../components/PodWithProfileImage';
+import ProfileImage from '../components/ProfileImage';
+import ProfileLanguages from '../components/ProfileLanguage';
+import ProfileLocation from '../components/ProfileLocation';
+import ProfileName from '../components/ProfileName';
 import SkillList from '../components/SkillList';
 
 export default function ProfilePage() {
@@ -12,7 +15,6 @@ export default function ProfilePage() {
             </div>
 
             <div className="nav-bar py-4 bg-black">
-
             </div>
         </header>
 
@@ -21,15 +23,15 @@ export default function ProfilePage() {
 
             <section className="border-t border-l border-gray-200">
                 <div className="grid grid-cols-1 lg:grid-cols-4">
-                    <div className="">
-                        <PodWithProfileImage />
+                    <div className="col-span-1">
+                        <ProfileImage />
                     </div>
                     <div className="lg:col-span-3 border-b border-r border-gray-200">
                         <div className="py-6 px-12">
-                            <h1 className="text-5xl font-light">Martin Chikilian</h1>
+                            <ProfileName></ProfileName>
                             <div className="pt-1"></div>
-                            <div className="font-bold">Portland, Oregon, USA</div>
-                            <div className="font-bold">English, French, German</div>
+                            <ProfileLocation />
+                            <ProfileLanguages></ProfileLanguages>
                             <div className="pt-4"></div>
                             <SkillList />
                         </div>

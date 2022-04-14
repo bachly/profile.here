@@ -4,3 +4,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.css-triangle-button {
+    &__corner {
+        border-top: 32px solid transparent;
+        border-right-width: 32px;
+        border-right-style: solid;
+    }
+    &__icon {
+        position: absolute;
+        right: 4px;
+        bottom: 4px;
+        fill: currentColor;
+    }
+}

@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React from 'react'
 import Pod from '../components/Pod';
 import PodWithList from '../components/PodWithList';
+import PodWithMap from '../components/PodWithMap';
 import ProfileImage from '../components/ProfileImage';
 import ProfileLanguages from '../components/ProfileLanguage';
 import ProfileLocation from '../components/ProfileLocation';
@@ -85,6 +86,18 @@ export default function ProfilePage() {
                     />
                     <Pod
                         title="Availability"
+                    />
+                    <Pod
+                        title="The most amazing..."
+                    />
+                    <Pod
+                        title="In clients I look for..."
+                    />
+                    <PodWithMap
+                        title="Location"
+                    />
+                    <Pod
+                        title="Note"
                     />
                 </div>
             </section>

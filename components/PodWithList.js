@@ -56,6 +56,10 @@ export default function PodWithList({ title, subtitle, list = [], maxListItems =
         }
     }
 
+    function hasData() {
+        return listData && Object.keys(listData).length > 0 && Object.keys(listData).filter(key => !!listData[key] && !!listData[key].name).length > 0;;
+    }
+
     return <Pod title={title} subtitle={subtitle} isEditing={isEditing}>
         {isEditing ?
             <>
@@ -75,7 +79,7 @@ export default function PodWithList({ title, subtitle, list = [], maxListItems =
                 </form>
             </> :
             <>
-                {listData && Object.keys(listData).length > 0 ?
+                {hasData() ?
                     <ul className="list-disc px-6">
                         {Object.keys(listData).map(i => {
                             const item = listData[i];

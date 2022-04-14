@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React from 'react'
 import Pod from '../components/Pod';
 import PodWithList from '../components/PodWithList';
+import PodWithProfileImage from '../components/PodWithProfileImage';
 import SkillList from '../components/SkillList';
 
 export default function ProfilePage() {
@@ -20,8 +21,8 @@ export default function ProfilePage() {
 
             <section className="border-t border-l border-gray-200">
                 <div className="grid grid-cols-1 lg:grid-cols-4">
-                    <div className="pb-1/1 bg-gray-300">
-                        Picture
+                    <div className="">
+                        <PodWithProfileImage />
                     </div>
                     <div className="lg:col-span-3 border-b border-r border-gray-200">
                         <div className="py-6 px-12">

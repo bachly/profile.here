@@ -30,25 +30,19 @@ export default function PodWithList({ title, subtitle, list = [], maxListItems =
     function handleSubmitForm(event) {
         event && event.preventDefault();
         setIsEditing(false);
-        onSave && onSave();
+        const listDataToArray = Object.keys(listData).map(key => listData[key]);
+        onSave && onSave(listDataToArray);
     }
 
-    function handleInput(i, field) {
+    function handleInput(key, field) {
         return (event) => {
             event && event.preventDefault();
 
             if (field === 'name' || field === 'description') {
-                console.log('handleInput', {
-                    ...listData,
-                    [i]: {
-                        ...listData[i],
-                        [field]: event.target.value
-                    }
-                })
                 setListData({
                     ...listData,
-                    [i]: {
-                        ...listData[i],
+                    [key]: {
+                        ...listData[key],
                         [field]: event.target.value
                     }
                 })
@@ -64,10 +58,10 @@ export default function PodWithList({ title, subtitle, list = [], maxListItems =
         {isEditing ?
             <>
                 <form onSubmit={handleSubmitForm}>
-                    {Object.keys(listData).map(i => {
-                        return <div key={`${title}-list-item-input-${i}`} className="flex items-center border border-gray-400">
-                            <input onChange={handleInput(i, 'name')} value={listData[i].name} className="w-1/2 px-1 border-r border-gray-800" placeholder={listItemPlaceholders.name}></input>
-                            <input onChange={handleInput(i, 'description')} value={listData[i].description} className="w-1/2 px-1" placeholder={listItemPlaceholders.description}></input>
+                    {Object.keys(listData).map((key, index) => {
+                        return <div key={`${title}-list-item-input-${key}`} className="flex items-center border border-gray-400">
+                            <input autoFocus={index === 0} onChange={handleInput(key, 'name')} value={listData[key].name} className="w-1/2 px-1 border-r border-gray-800" placeholder={listItemPlaceholders.name}></input>
+                            <input onChange={handleInput(key, 'description')} value={listData[key].description} className="w-1/2 px-1" placeholder={listItemPlaceholders.description}></input>
                         </div>
                     })}
                     <button className="mt-2 text-green-500 fill-current hover:opacity-70 duration-200 transition">

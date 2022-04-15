@@ -7,6 +7,8 @@ import ProfileImage from '../components/ProfileImage';
 import ProfileLanguages from '../components/ProfileLanguage';
 import ProfileLocation from '../components/ProfileLocation';
 import ProfileName from '../components/ProfileName';
+import ProfilePortfolio from '../components/ProfilePortfolio';
+import ProfileExperience from '../components/ProfileExperience';
 import SkillList from '../components/SkillList';
 import { UserProfileContext } from '../lib/reactContexts';
 
@@ -52,39 +54,10 @@ export default function ProfilePage() {
                                 </div>
                             </div>
                         </div>
-                        <PodWithList
-                            title="Portfolio"
-                            subtitle="PHP, Ruby, Javascript"
-                            maxListItems={7}
-                            listItemPlaceholders={{
-                                name: "Project name",
-                                description: "Skills used"
-                            }}
-                            list={[
-                                {
-                                    name: "NavalPlan",
-                                    description: "PHP, Ruby"
-                                },
-                                {
-                                    name: "MyTime",
-                                    description: "Javascript"
-                                },
-                                {
-                                    name: "Formidable",
-                                    description: "PHP, Ruby"
-                                }
-                            ]}
-                        />
-                        <PodWithList title="Experience"
-                            list={[]}
-                            maxListItems={4}
-                            listItemPlaceholders={{
-                                name: "Technology",
-                                description: "Years"
-                            }}
-                        >
 
-                        </PodWithList>
+                        <ProfilePortfolio />
+                        <ProfileExperience />
+
                         <Pod
                             title="Sample code and algorithms"
                         />

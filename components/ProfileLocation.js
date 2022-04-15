@@ -107,7 +107,7 @@ export default function ProfileLocation() {
                                 {userProfile?.location?.validatedLocation}
                             </button>
                             : <div>
-                                <button onClick={handleClickToEditLocation} className="w-full border border-transparent hover:border hover:border-gray-300 px-2 -ml-2 text-left font-bold">
+                                <button onClick={handleClickToEditLocation} className="w-full border border-transparent hover:border hover:border-gray-300 px-2 -ml-2 text-left font-bold cursor-default">
                                     Add location
                                 </button>
                             </div>

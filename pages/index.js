@@ -33,7 +33,7 @@ export default function ProfilePage() {
                         <div className="col-span-1">
                             <ProfileImage />
                         </div>
-                        <div className="lg:col-span-3 border-b border-r border-gray-200">
+                        <div className="lg:col-span-3 border-b border-r border-gray-200 bg-gray-100">
                             <div className="flex items-start">
                                 <div className="flex-1 py-6 pl-10 pr-2">
                                     <ProfileName></ProfileName>

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
+    "@splidejs/react-splide": "^0.7.5",
     "axios": "^0.26.1",
     "axios-hooks": "^3.0.1",
     "clsx": "^1.1.1",

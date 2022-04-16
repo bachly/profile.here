@@ -83,15 +83,18 @@ export default function ProfilePage() {
         <ToptalSkillLinks></ToptalSkillLinks>
 
         <div className="mt-8 bg-black pt-6 pb-8">
-            <div className="max-w-3xl mx-auto">
-                <div className="flex items-center justify-cetner">
-                    <h2>
+            <div className="max-w-3xl mx-auto px-4">
+                <div className="flex flex-wrap items-center justify-cetner">
+                    <h2 className="w-full lg:w-auto text-center mb-2">
                         <span className="text-xl text-gray-500">Join the toptal community.&nbsp;</span>
+                        <div className="block sm:hidden"/>
                         <span className="text-xl text-gray-300">Apply to work with us as a</span>
+                    </h2>
+                    <div className="w-full lg:w-auto flex items-center justify-center">
                         <a href="#" className="bg-white py-3 px-6 rounded-full font-bold uppercase tracking-wide text-sm ml-2">Developer</a>
                         <span className="text-gray-600 text-2xl italic ml-2 text-light">or</span>
                         <a href="#" className="bg-white py-3 px-6 rounded-full font-bold uppercase tracking-wide text-sm ml-2">Client</a>
-                    </h2>
+                    </div>
                 </div>
             </div>
         </div>

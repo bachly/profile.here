@@ -18,3 +18,11 @@
         fill: currentColor;
     }
 }
+
+.splide__pagination {
+    margin-bottom: -3rem;
+}
+
+.splide__pagination__page.is-active {
+    background: black;
+}

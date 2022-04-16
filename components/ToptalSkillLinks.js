@@ -29,8 +29,6 @@ export default function ToptalSkillLinks({ skillLinks = DEFAULT_SKILL_LINKS }) {
     const mobileNumLinksPerPage = 20;
     const mobileNumPages = parseInt(skillLinks.length / mobileNumLinksPerPage + 1);
 
-    console.log(mobileNumLinksPerPage, mobileNumPages)
-
     return <section className="pt-8 pb-20">
         <div className="max-w-6xl mx-auto lg:px-4">
             <h2 className="font-bold text-2xl text-center">

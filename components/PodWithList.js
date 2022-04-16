@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonTick from './ButtonTick';
 import Pod from './Pod';
 
 export default function PodWithList({ title, subtitle, list = [], maxListItems = 7,
@@ -64,12 +65,9 @@ export default function PodWithList({ title, subtitle, list = [], maxListItems =
                             <input onChange={handleInput(key, 'description')} value={listData[key].description} className="w-1/2 px-1" placeholder={listItemPlaceholders.description}></input>
                         </div>
                     })}
-                    <button className="mt-2 text-green-500 fill-current hover:opacity-70 duration-200 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
-                        </svg>
-                        <div className="sr-only">Save {title}</div>
-                    </button>
+                    <div className="mt-1">
+                        <ButtonTick text={`Save portfoio`} />
+                    </div>
                 </form>
             </> :
             <>

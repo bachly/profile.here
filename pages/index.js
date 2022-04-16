@@ -14,6 +14,11 @@ import NavLink from '../components/NavLink';
 import SelfIntro from '../components/SelfIntro';
 import ToptalSkillLinks from '../components/ToptalSkillLinks';
 import Header from '../components/Header';
+import PodWithNoteEditable from '../components/PodWithNoteEditable';
+import ProfileMostAmazing from '../components/ProfileMostAmazing';
+import ProfileClientRequirements from '../components/ProfileClientRequirements';
+import ProfileNote from '../components/ProfileNote';
+import PodWithImage from '../components/PodWithImage';
 
 export default function ProfilePage() {
     const [userProfile, setUserProfile] = React.useState({});
@@ -53,26 +58,20 @@ export default function ProfilePage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                         <ProfilePortfolio />
                         <ProfileExperience />
-
-                        <Pod
-                            title="Sample code and algorithms"
-                        />
-                        <Pod
-                            title="Availability"
-                        />
-                        <Pod
-                            title="The most amazing..."
-                        />
-                        <Pod
-                            title="In clients I look for..."
-                        />
+                        <PodWithImage title="Sample code and algorithms" imageSrc="/img/code.png" />
+                        <Pod title="Availability">
+                            <div className="font-bold text-4xl text-center">Full-time</div>
+                            <div className="border-t border-gray-200 mt-8 pt-6"></div>
+                            <div className="font-bold text-center text-lg">Preferred environment</div>
+                            <div className="pt-4 px-6 text-center">Mac OSX, VSCode, Git, GitHub, NodeJS</div>
+                        </Pod>
+                        <ProfileMostAmazing />
+                        <ProfileClientRequirements />
                         <PodWithMap
                             mapImageSrc={userProfile?.location?.mapImageSrc}
                             description={`Martin lives in ${userProfile?.location?.validatedLocation}`}
                         />
-                        <Pod
-                            title="Note"
-                        />
+                        <ProfileNote />
                     </div>
                 </section>
             </UserProfileContext.Provider>
@@ -87,7 +86,7 @@ export default function ProfilePage() {
                 <div className="flex flex-wrap items-center justify-cetner">
                     <h2 className="w-full lg:w-auto text-center mb-2">
                         <span className="text-xl text-gray-500">Join the toptal community.&nbsp;</span>
-                        <div className="block sm:hidden"/>
+                        <div className="block sm:hidden" />
                         <span className="text-xl text-gray-300">Apply to work with us as a</span>
                     </h2>
                     <div className="w-full lg:w-auto flex items-center justify-center">

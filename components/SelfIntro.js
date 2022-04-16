@@ -28,7 +28,7 @@ export default function SelfIntro() {
                     <div className="text-gray-300 text-xl">
                         To hire Martin join us as a
                     </div>
-                    <a href="#" className="bg-white py-2 px-8 rounded-full font-extrabold uppercase tracking-wide text-sm ml-2">Client</a>
+                    <a href="#" className="bg-white py-2 px-8 rounded-full font-bold uppercase tracking-wide text-sm ml-2">Client</a>
                 </div>
             </div>
         </div>

@@ -13,6 +13,7 @@ import SkillList from '../components/SkillList';
 import { UserProfileContext } from '../lib/reactContexts';
 import NavLink from '../components/NavLink';
 import SelfIntro from '../components/SelfIntro';
+import ToptalSkillLinks from '../components/ToptalSkillLinks';
 
 export default function ProfilePage() {
     const [userProfile, setUserProfile] = React.useState({});
@@ -116,5 +117,83 @@ export default function ProfilePage() {
         </div>
 
         <SelfIntro></SelfIntro>
+
+        <ToptalSkillLinks></ToptalSkillLinks>
+
+        <div className="mt-8 bg-black pt-6 pb-8">
+            <div className="max-w-3xl mx-auto">
+                <div className="flex items-center justify-cetner">
+                    <h2>
+                        <span className="text-xl text-gray-500">Join the toptal community.&nbsp;</span>
+                        <span className="text-xl text-gray-300">Apply to work with us as a</span>
+                        <a href="#" className="bg-white py-3 px-6 rounded-full font-bold uppercase tracking-wide text-sm ml-2">Developer</a>
+                        <span className="text-gray-600 text-2xl italic ml-2 text-light">or</span>
+                        <a href="#" className="bg-white py-3 px-6 rounded-full font-bold uppercase tracking-wide text-sm ml-2">Client</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <footer className="bg-gray-300 pt-6 pb-4">
+            <div className="max-w-6xl mx-auto">
+                <div className="flex items-start">
+                    <div className="w-1/2">
+                        <h2 className="font-bold tracking-tight cursor-default">About Toptal</h2>
+                        <div className="pt-2 pr-20 cursor-default">
+                            TopTal connects start-ups, businesses, and organization to a growing network of the best developers in the world.
+                            Our engineers are available full- or part-time and are able to seemlessly integrate into your team.
+                        </div>
+                    </div>
+                    <div className="w-1/2">
+                        <div className="flex items-start">
+                            <div className="w-1/2">
+                                <h2 className="font-bold tracking-tight cursor-default">FAQ</h2>
+                                <nav className="pt-2">
+                                    <a href="#" className="block pb-1 hover:underline">How can I join toptal?</a>
+                                    <a href="#" className="block pb-1 hover:underline">What requirements I have to meet?</a>
+                                    <a href="#" className="block pb-1 hover:underline">How do you pay me?</a>
+                                    <a href="#" className="block pb-1 hover:underline">When can I start working?</a>
+                                    <a href="#" className="block pb-1 hover:underline">How many hours can I work?</a>
+                                </nav>
+                            </div>
+                            <div className="w-1/2">
+                                <div className="flex items-start">
+                                    <div className="w-1/3">
+                                        <nav>
+                                            <a href="#" className="block pb-1 font-bold hover:underline">What</a>
+                                            <a href="#" className="block pb-1 font-bold hover:underline">Why</a>
+                                            <a href="#" className="block pb-1 font-bold hover:underline">How</a>
+                                            <a href="#" className="block pb-1 font-bold hover:underline">Clients</a>
+                                            <a href="#" className="block pb-1 font-bold hover:underline">Team</a>
+                                            <a href="#" className="block pb-1 font-bold hover:underline">Lab</a>
+                                        </nav>
+                                    </div>
+                                    <div className="w-2/3">
+                                        <h2 className="font-bold tracking-tight cursor-default">Contact</h2>
+                                        <nav className="pt-2">
+                                            <a href="#" className="block pb-1">Join us</a>
+                                            <a href="#" className="block pb-1">Send us an e-mail</a>
+                                            <a href="#" className="block pb-1">Follow us on Twitter</a>
+                                            <a href="#" className="block pb-1">Call 888.323.4422</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="max-w-6xl mx-auto cursor-default">
+                <div className="flex items-center justify-between">
+                    <div className="text-xs">Copyright {new Date().getFullYear()} Toptal Development Inc.</div>
+                    <div className="">
+                        <nav>
+                            <a href="#" className="text-xs hover:underline">Privacy Policy</a>
+                            <a href="#" className="text-xs ml-2 hoverunderline">Terms of use</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </>
 }

@@ -1,3 +1,4 @@
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import PodWithImage from "./PodWithImage";
 import PodWithNote from "./PodWithNote";
 
@@ -8,19 +9,40 @@ export default function SelfIntro() {
 
             <div className="pt-8"></div>
 
-            <div className="grid grid-cols-4 border-t border-l border-gray-300">
-                <PodWithImage imageSrc="/img/kayak.jpeg" alt=" I love kayaking on the weekends.">
-                    I love kayaking on the weekends.
-                </PodWithImage>
-                <PodWithImage imageSrc="/img/university.jpeg" alt=" Graduated from Princeton univesity in 2011.">
-                    Graduated from Princeton univesity in 2011.
-                </PodWithImage>
-                <PodWithNote title="The most amazing ..."
-                    author={"Martin"}
-                    description="...software I have built is the system used at the ABC University. It is a software that has transformed the productivity of both lecturers and students. To date, there are 2000 users in the system." />
-                <PodWithImage imageSrc="/img/portland.jpeg" alt="I live in the city of Portland, Oregon, U.S.A">
-                    I live in the city of Portland, Oregon, U.S.A <a className="text-gray-400 hover:text-white" href="#">(see map)</a>
-                </PodWithImage>
+            <div className="border-t border-l border-gray-300">
+                <Splide options={{
+                    perPage: '4',
+                    pagination: false,
+                    breakpoints: {
+                        1024: {
+                            perPage: '2'
+                        },
+                        768: {
+                            perPage: '1'
+                        }
+                    }
+                }}>
+                    <SplideSlide>
+                        <PodWithImage imageSrc="/img/kayak.jpeg" alt=" I love kayaking on the weekends.">
+                            I love kayaking on the weekends.
+                        </PodWithImage>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <PodWithImage imageSrc="/img/university.jpeg" alt=" Graduated from Princeton univesity in 2011.">
+                            Graduated from Princeton univesity in 2011.
+                        </PodWithImage>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <PodWithNote title="The most amazing ..."
+                            author={"Martin"}
+                            description="...software I have built is the system used at the ABC University. It is a software that has transformed the productivity of both lecturers and students. To date, there are 2000 users in the system." />
+                    </SplideSlide>
+                    <SplideSlide>
+                        <PodWithImage imageSrc="/img/portland.jpeg" alt="I live in the city of Portland, Oregon, U.S.A">
+                            I live in the city of Portland, Oregon, U.S.A <a className="text-gray-400 hover:text-white" href="#">(see map)</a>
+                        </PodWithImage>
+                    </SplideSlide>
+                </Splide>
             </div>
 
             <div className="bg-black border border-gray-300 py-6 relative">

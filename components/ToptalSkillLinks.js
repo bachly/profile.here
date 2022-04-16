@@ -32,7 +32,7 @@ export default function ToptalSkillLinks({ skillLinks = DEFAULT_SKILL_LINKS }) {
     console.log(mobileNumLinksPerPage, mobileNumPages)
 
     return <section className="pt-8 pb-20">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto lg:px-4">
             <h2 className="font-bold text-2xl text-center">
                 Top skills on toptal
             </h2>

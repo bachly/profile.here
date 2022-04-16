@@ -11,6 +11,8 @@ import ProfilePortfolio from '../components/ProfilePortfolio';
 import ProfileExperience from '../components/ProfileExperience';
 import SkillList from '../components/SkillList';
 import { UserProfileContext } from '../lib/reactContexts';
+import NavLink from '../components/NavLink';
+import SelfIntro from '../components/SelfIntro';
 
 export default function ProfilePage() {
     const [userProfile, setUserProfile] = React.useState({});
@@ -18,9 +20,40 @@ export default function ProfilePage() {
     return <>
         <header>
             <div className="top-bar py-8 bg-black">
+                <div className="max-w-6xl mx-auto">
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-start">
+                            <img className="w-32" src="/img/toptal-logo-inverse.png"></img>
+                            <div className="ml-3 text-white text-xl font-bold italic text-gray-400">
+                                Exclusive access to top developers
+                            </div>
+                        </div>
+                        <div className="flex items-center justify-end">
+                            <div className="text-white text-gray-300">
+                                Join toptal as
+                            </div>
+                            <a className="bg-white rounded-sm text-black py-1 px-3 font-semibold uppercase tracking-wide ml-4" href="#">Developer</a>
+                            <a className="bg-white rounded-sm text-black py-1 px-3 font-semibold uppercase tracking-wide ml-2" href="">Company</a>
+
+                            <a className="bg-gray-500 rounded-sm text-white py-1 px-3 font-semibold uppercase tracking-wide ml-8" href="">Login</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div className="nav-bar py-4 bg-black">
+            <div className="nav-bar pb-5 bg-black">
+                <div className="max-w-6xl mx-auto flex items-center justify-between">
+                    <nav>
+                        <NavLink>what</NavLink>
+                        <NavLink>why</NavLink>
+                        <NavLink>how</NavLink>
+                        <NavLink>clients</NavLink>
+                        <NavLink>team</NavLink>
+                        <NavLink>labs</NavLink>
+                        <NavLink>faq</NavLink>
+                        <NavLink>contact</NavLink>
+                    </nav>
+                </div>
             </div>
         </header>
 
@@ -81,5 +114,7 @@ export default function ProfilePage() {
                 </section>
             </UserProfileContext.Provider>
         </div>
+
+        <SelfIntro></SelfIntro>
     </>
 }

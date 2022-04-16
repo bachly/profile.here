@@ -4,7 +4,7 @@ export default function PodWithMap({ mapImageSrc, description }) {
     return <div className={clsx(`pb-10/9 border-r border-b border-gray-200 relative`)}>
         {mapImageSrc ?
             <>
-                <img className="absolute top-0 left-0 w-full h-full" src={mapImageSrc} />
+                <img className="absolute top-0 left-0 w-full h-full" src={mapImageSrc} alt={description} />
 
                 {description ?
                     <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-80 py-4 pl-5 pr-16">

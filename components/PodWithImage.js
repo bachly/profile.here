@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-export default function PodWithImage({ imageSrc, title, children, alt }) {
+export default function PodWithImage({ imageSrc, title, children, alt = '' }) {
     return <div className={clsx(`pb-10/9 border-r border-gray-300 relative`)}>
         <figure>
             {imageSrc ?

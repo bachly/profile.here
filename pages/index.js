@@ -19,6 +19,7 @@ import ProfileMostAmazing from '../components/ProfileMostAmazing';
 import ProfileClientRequirements from '../components/ProfileClientRequirements';
 import ProfileNote from '../components/ProfileNote';
 import PodWithImage from '../components/PodWithImage';
+import ProfileLocationMap from '../components/ProfileLocationMap';
 
 export default function ProfilePage() {
     const [userProfile, setUserProfile] = React.useState({});
@@ -67,10 +68,7 @@ export default function ProfilePage() {
                         </Pod>
                         <ProfileMostAmazing />
                         <ProfileClientRequirements />
-                        <PodWithMap
-                            mapImageSrc={userProfile?.location?.mapImageSrc}
-                            description={`Martin lives in ${userProfile?.location?.validatedLocation}`}
-                        />
+                        <ProfileLocationMap />
                         <ProfileNote />
                     </div>
                 </section>

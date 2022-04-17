@@ -30,13 +30,11 @@ export default function PodWithNoteEditable({ title, defaultValue, onSave }) {
 
     function handleSubmit(event) {
         event && event.preventDefault();
-        if (isFormValid()) {
-            onSave && onSave(state.noteInput);
-            setState({
-                ...state,
-                isEditing: false
-            })
-        }
+        onSave && onSave(state.noteInput);
+        setState({
+            ...state,
+            isEditing: false
+        })
     }
 
     return <>

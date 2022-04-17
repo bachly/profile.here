@@ -8,7 +8,7 @@ import { UserProfileContext } from '../lib/reactContexts';
 export default function ProfileLocation() {
     const [isEditing, setIsEditing] = React.useState(false);
     const { userProfile, setUserProfile } = React.useContext(UserProfileContext);
-    const [locationInput, setLocationInput] = React.useState();
+    const [locationInput, setLocationInput] = React.useState(userProfile?.location?.validatedLocation);
 
     const [{
         data: successValidatingLocation,
@@ -43,12 +43,6 @@ export default function ProfileLocation() {
         }
     }, [successValidatingLocation])
 
-    React.useEffect(function onload() {
-        window.addEventListener('click', function (event) {
-           setIsEditing(false);
-        })
-    }, [])
-
     async function handleOnSubmit(event) {
         event && event.preventDefault();
         if (locationInput) {
@@ -58,6 +52,9 @@ export default function ProfileLocation() {
                 console.error("Error caught here", err);
                 setIsEditing(false);
             }
+        } else {
+            setLocationInput(userProfile?.location?.validatedLocation);
+            setIsEditing(false);
         }
     }
 
@@ -75,6 +72,10 @@ export default function ProfileLocation() {
         event && event.stopPropagation();
     }
 
+    function isFormValid() {
+        return !!locationInput;
+    }
+
     return <div onClick={stopPropagation}>
         {isEditing ?
             <>
@@ -89,7 +90,7 @@ export default function ProfileLocation() {
                         {isValidatingLocation ? <>
                             <div className="text-xs text-gray-300 cursor-wait">Validating city...</div>
                         </> :
-                            <ButtonTick />}
+                            <ButtonTick text="Save location" success={isFormValid()} />}
                     </div>
                 </form>
             </> :
@@ -101,18 +102,10 @@ export default function ProfileLocation() {
                             <IconError text={"Error validating location"} />
                         </div>
                     </button>
-                    : <>
-                        {userProfile?.location?.validatedLocation ?
-                            <button onClick={handleClickToEditLocation} className="font-bold cursor-default px-2 -ml-2 border border-transparent">
-                                {userProfile?.location?.validatedLocation}
-                            </button>
-                            : <div>
-                                <button onClick={handleClickToEditLocation} className="w-full border border-transparent hover:border hover:border-gray-300 px-2 -ml-2 text-left font-bold cursor-default">
-                                    Add location
-                                </button>
-                            </div>
-                        }
-                    </>
+                    :
+                    <button onClick={handleClickToEditLocation} className="w-full border border-transparent hover:border hover:border-gray-300 px-2 -ml-2 text-left font-bold cursor-default">
+                        {userProfile?.location?.validatedLocation || 'Add location'}
+                    </button>
                 }
             </>
         }

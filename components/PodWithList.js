@@ -55,6 +55,10 @@ export default function PodWithList({ title, subtitle, list = [], maxListItems =
         return listData && Object.keys(listData).length > 0 && Object.keys(listData).filter(key => !!listData[key] && !!listData[key].name).length > 0;;
     }
 
+    function isFormValid() {
+        return hasData();
+    }
+
     return <Pod title={title} subtitle={subtitle} isEditing={isEditing}>
         {isEditing ?
             <>
@@ -66,7 +70,7 @@ export default function PodWithList({ title, subtitle, list = [], maxListItems =
                         </div>
                     })}
                     <div className="mt-1">
-                        <ButtonTick text={`Save portfoio`} />
+                        <ButtonTick text='Save portfoio' success={isFormValid()} />
                     </div>
                 </form>
             </> :
@@ -78,7 +82,7 @@ export default function PodWithList({ title, subtitle, list = [], maxListItems =
                             if (item.name === "" || item.description === "") {
                                 return <li className="list-none" key={`${title}-list-item-${i}`}></li>
                             } else {
-                                return <li key={`${title}-list-item-${i}`} className="cursor-pointer" onClick={handleClickToEdit}>
+                                return <li key={`${title}-list-item-${i}`} className="cursor-default" onClick={handleClickToEdit}>
                                     <span className="font-bold">{item.name}</span>
                                     ,&nbsp;<span className="">{item.description}</span>
                                 </li>

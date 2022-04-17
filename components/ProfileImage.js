@@ -24,7 +24,7 @@ export default function PodWithProfileImage() {
         setIsEditing(false);
     }
 
-    return <div className={clsx(`pb-1/1 border-r border-b border-gray-200 relative`, isEditing ? 'bg-black' : 'bg-gray-300')}>
+    return <div className={clsx(`pb-1/1 relative`, isEditing ? 'bg-black' : 'bg-gray-300')}>
         <div className="absolute top-0 left-0 w-full h-full">
             <div className="relative h-full w-full">
                 {profileImageSrc ?

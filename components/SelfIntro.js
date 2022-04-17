@@ -45,12 +45,30 @@ export default function SelfIntro() {
                 </Splide>
             </div>
 
-            <div className="bg-black border border-gray-300 py-6 relative">
+            <div className="bg-black border border-gray-300 py-8 relative">
                 <div className="max-w-3xl mx-auto flex items-center justify-center">
-                    <div className="text-gray-300 text-xl">
+                    <div className="text-gray-300 text-xl lg:text-2xl">
                         To hire Martin join us as a
                     </div>
-                    <a href="#" className="bg-white py-2 px-8 rounded-full font-bold uppercase tracking-wide text-sm ml-2">Client</a>
+                    <a href="#" className="bg-white py-3 px-12 rounded-full font-bold uppercase tracking-wide ml-2">Client</a>
+                </div>
+                <div className="hidden lg:block lg:absolute vertically-centered right-10 top-0">
+                    <a href="#" className="text-gray-300 text-sm font-semibold flex items-center justify-center hover:text-white group">
+                        <span>or as a developer</span>
+                        <span className="ml-2 fill-current">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 6.968 7-6.968 7z" /></svg>
+                        </span>
+                    </a>
+                </div>
+                <div className="mt-2 block lg:hidden">
+                    <a href="#" className="text-gray-300 text-sm font-semibold flex items-center justify-center hover:text-white group">
+                        <span>or as a developer</span>
+                        <span className="ml-2 fill-current">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 6.968 7-6.968 7z" /></svg>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>

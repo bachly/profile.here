@@ -13,5 +13,11 @@ export default function PodWithNote({ title, description = '', author = '' }) {
                     : <></>}
             </div>
         </div>
+        <div className="absolute top-20 left-2 z-4 opacity-10">
+            <img src="/img/quotation-mark.svg" />
+        </div>
+        <div className="absolute bottom-2 right-4 z-0 opacity-10" style={{ transform: "rotate(180deg)" }}>
+            <img src="/img/quotation-mark.svg" />
+        </div>
     </div>
 }

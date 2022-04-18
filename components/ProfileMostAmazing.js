@@ -18,6 +18,7 @@ export default function ProfileMostAmazing() {
     return <PodWithNoteEditable
         title="The most amazing..."
         defaultValue={userProfile.notes?.mostAmazing}
+        author={userProfile?.fullname?.split(' ')[0]}
         onSave={onSave}
     />
 }

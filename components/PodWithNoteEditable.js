@@ -2,7 +2,7 @@ import React from "react";
 import Pod from "./Pod";
 import ButtonTick from "./ButtonTick";
 
-export default function PodWithNoteEditable({ title, defaultValue, onSave }) {
+export default function PodWithNoteEditable({ title, defaultValue, author, onSave }) {
     const [state, setState] = React.useState({
         isEditing: false,
         noteInput: defaultValue
@@ -53,13 +53,32 @@ export default function PodWithNoteEditable({ title, defaultValue, onSave }) {
                 :
                 <>
                     {state.noteInput ?
-                        <div onClick={handleClickToEdit} className="flex-1 max-h-5/6 overflow-hidden cursor-default">
-                            <div className="pt-8 px-2 italic text-sm text-lg">{state.noteInput}</div>
+                        <div className="">
+                            <div onClick={handleClickToEdit} className="flex-1 max-h-5/6 overflow-hidden cursor-default">
+                                <div className="pt-8 px-2 italic text-sm text-lg relative z-10">{state.noteInput}</div>
+                            </div>
+                            {author ?
+                                <div className="pt-2 font-bold text-sm text-right">- {author}</div>
+                                : <></>}
+
+                            <div className="absolute top-20 left-2 z-4 opacity-10">
+                                <img src="/img/quotation-mark.svg" />
+                            </div>
+                            <div className="absolute bottom-2 right-4 z-0 opacity-10" style={{ transform: "rotate(180deg)" }}>
+                                <img src="/img/quotation-mark.svg" />
+                            </div>
                         </div>
                         :
                         <div className="absolute top-0 left-0 w-full h-full">
                             <div className="relative h-full w-full">
                                 <button onClick={handleClickToEdit} className="absolute-middle hover:text-blue-500 duration transition-200">Add content...</button>
+
+                                <div className="absolute top-20 left-2 z-4 opacity-10">
+                                    <img src="/img/quotation-mark.svg" />
+                                </div>
+                                <div className="absolute bottom-2 right-4 z-0 opacity-10" style={{ transform: "rotate(180deg)" }}>
+                                    <img src="/img/quotation-mark.svg" />
+                                </div>
                             </div>
                         </div>
                     }

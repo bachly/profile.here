@@ -26,6 +26,8 @@ yarn cypress-udpate-snapshot
 
 Environment variables are stored in `.env.local` for local development
 
+Rename `.env.example` to `.env.local` and add the API keys accordingly
+
 ### TailwindCSS
 
 TailwindCSS is configured in `tailwind.config.js` and `postcss.config.js`

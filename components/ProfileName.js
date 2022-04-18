@@ -53,11 +53,13 @@ export default function ProfileName() {
 
     return <div onClick={stopPropagation}>
         {state.isEditing ?
-            <form onSubmit={handleOnSubmit} className="text-4xl font-light w-full border border-gray-300 -ml-2 relative">
-                <input autoFocus
+            <form data-cypress="name-input-form" onSubmit={handleOnSubmit} className="text-4xl font-light w-full border border-gray-300 -ml-2 relative">
+                <input
+                    autoFocus
                     defaultValue={state.input}
                     className={clsx('font-light top-0 left-0 w-full px-2 disabled:opacity-50')}
                     onChange={handleInput}
+                    name="name"
                 />
                 <div className="absolute h-full top-0 right-1 flex items-center">
                     <ButtonTick text="Name is valid" success={isFormValid()} />
@@ -65,10 +67,13 @@ export default function ProfileName() {
             </form>
             : <>
                 {userProfile.fullname ?
-                    <h1 onClick={handleClickToEdit} className="text-4xl font-light border border-transparent cursor-default">
+                    <h1 data-cypress="name-display"
+                        onClick={handleClickToEdit} className="text-4xl font-light border border-transparent cursor-default">
                         {userProfile.fullname}
                     </h1> :
-                    <button onClick={handleClickToEdit} className="text-4xl font-light w-full text-left border border-transparent hover:border hover:border-gray-300 -ml-2 px-2 cursor-default" >
+                    <button data-cypress="name-display"
+                        onClick={handleClickToEdit}
+                        className="text-4xl font-light w-full text-left border border-transparent hover:border hover:border-gray-300 -ml-2 px-2 cursor-default" >
                         Add name
                     </button>}
             </>

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.0.4",
+    "cypress": "^9.5.4",
     "postcss": "^8.1.10",
     "sass": "^1.50.0",
     "tailwindcss": "^3.0.24"

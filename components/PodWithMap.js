@@ -3,17 +3,17 @@ import clsx from "clsx";
 export default function PodWithMap({ mapImageSrc, description }) {
     return <div className={clsx(`pb-10/9 border-r border-b border-gray-200 relative`)}>
         {mapImageSrc ?
-            <>
-                <img className="absolute top-0 left-0 w-full h-full" src={mapImageSrc} alt={description} />
+            <figure>
+                <img data-cypress="map-image" className="absolute top-0 left-0 w-full h-full" src={mapImageSrc} alt={description} />
 
                 {description ?
-                    <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-80 py-4 pl-5 pr-16">
+                    <figcaption data-cypress="map-description" className="absolute bottom-0 left-0 w-full bg-black bg-opacity-80 py-4 pl-5 pr-16">
                         <div className="text-white text-sm font-semibold">
                             {description}
                         </div>
-                    </div> : <></>}
+                    </figcaption> : <></>}
 
-                <button tabIndex="0" className="absolute bottom-0 right-0">
+                <button data-cypress="map-expand" tabIndex="0" className="absolute bottom-0 right-0">
                     <div className="css-triangle-button">
                         <div className="css-triangle-button__corner border-gray-300"></div>
                         <div className="css-triangle-button__icon text-gray-500">
@@ -24,8 +24,8 @@ export default function PodWithMap({ mapImageSrc, description }) {
                         View larger map
                     </div>
                 </button>
-            </> : <>
-                <div className="absolute top-0 left-0 w-full h-full">
+            </figure> : <>
+                <div data-cypress="map-title" className="absolute top-0 left-0 w-full h-full">
                     <div className="py-5 px-4">
                         <div className={clsx('font-bold text-xl text-center')}>Location</div>
                     </div>

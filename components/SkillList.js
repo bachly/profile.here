@@ -68,7 +68,7 @@ export default function SkillList({ list = [] }) {
 
     return <div className="max-w-lg">
         {listData && Object.keys(listData).length > 0 ?
-            <div className="inline-block mb-2">
+            <div data-cypress="skill-list-display" className="inline-block">
                 {Object.keys(listData).map(i => {
                     const item = listData[i];
                     if (item.skillName === "") {
@@ -85,11 +85,11 @@ export default function SkillList({ list = [] }) {
 
         {isAdding ?
             <>
-                <form onSubmit={handleSubmitNewSkill} className="inline-block" id="new-skill-form">
+                <form data-cypress="add-skill-form" onSubmit={handleSubmitNewSkill} className="inline-block" id="new-skill-form">
                     <div className="border border-gray-400 rounded-sm bg-white py-1 px-1">
                         <div className="flex items-center justify-between">
-                            <input type="text" autoFocus className="w-32 px-1" placeholder="Skill" defaultValue={newSkillName} onChange={handleInputNewSkill}></input>
-                            <select onChange={handleSelectSkillStrength} className="mx-1 bg-gray-200 rounded-md px-1 text-sm">
+                            <input name="skill-name" type="text" autoFocus className="w-32 px-1" placeholder="Skill" defaultValue={newSkillName} onChange={handleInputNewSkill}></input>
+                            <select name="skill-strength" onChange={handleSelectSkillStrength} className="mx-1 bg-gray-200 rounded-md px-1 text-sm">
                                 <option value={SKILL_STRENGTHS.STRONG}>Strong</option>
                                 <option value={SKILL_STRENGTHS.INTERMEDIATE}>Intermediate</option>
                                 <option value={SKILL_STRENGTHS.NEWBIE}>Newbie</option>
@@ -101,8 +101,8 @@ export default function SkillList({ list = [] }) {
             </> : <></>}
 
         {!isAdding ?
-            <button onClick={handleClickToEdit}
-                className="block duration transition-200 border border-transparent hover:border hover:border-gray-300 px-2 -ml-2 cursor-default group">
+            <button data-cypress="add-skill-button" onClick={handleClickToEdit}
+                className="mt-1 block duration transition-200 border border-transparent hover:border hover:border-gray-300 px-2 -ml-2 cursor-default group">
                 <div className="flex items-center">
                     Add skill
                     <span className="ml-1 hidden group-hover:block text-gray-400 fill-current">
@@ -137,10 +137,10 @@ function SkillListItem({ skillName, skillStrength, onRemove, onSave }) {
     }
 
     return <>{
-        <div className={`inline-block ${bgColor} text-white rounded-md py-1 px-3 mr-2 cursor-default group relative`}>
-            <span>{skillName}</span>
+        <div data-cypress="skill-list-item" className={`inline-block ${bgColor} text-white border border-transparent rounded-md py-1 px-3 mr-2 mb-1 cursor-default group relative`}>
+            <span data-cypress="skill-name">{skillName}</span>
             <div className="absolute right-1 top-0 h-full hidden group-hover:block text-red-500 fill-current">
-                <button onClick={handleClickToRemove(skillName)} className="h-full flex items-center">
+                <button data-cypress="remove-skill-button" onClick={handleClickToRemove(skillName)} className="h-full flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                         <circle cx="11" cy="11" r="10" fill="white" />
                         <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />

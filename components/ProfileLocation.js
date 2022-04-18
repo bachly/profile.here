@@ -35,6 +35,7 @@ export default function ProfileLocation() {
             setIsEditing(false);
 
             setUserProfile({
+                ...userProfile,
                 location: {
                     validatedLocation: successValidatingLocation?.data?.validatedLocation,
                     mapImageSrc: successValidatingLocation?.data?.mapImageSrc
@@ -79,12 +80,13 @@ export default function ProfileLocation() {
     return <div onClick={stopPropagation}>
         {isEditing ?
             <>
-                <form onSubmit={handleOnSubmit} className={clsx(`w-full bg-white border border-gray-300 -ml-2 flex items-center justify-between relative`)}>
+                <form data-cypress="location-input-form" onSubmit={handleOnSubmit} className={clsx(`w-full bg-white border border-gray-300 -ml-2 flex items-center justify-between relative`)}>
                     <input autoFocus
                         defaultValue={locationInput}
                         className={clsx('font-bold top-0 left-0 w-full px-2 disabled:opacity-50', isValidatingLocation ? 'cursor-wait' : '')}
                         disabled={isValidatingLocation}
                         onChange={handleInputLocation}
+                        name="location"
                     ></input>
                     <div className="absolute h-full top-0 right-1 flex items-center">
                         {isValidatingLocation ? <>
@@ -103,7 +105,7 @@ export default function ProfileLocation() {
                         </div>
                     </button>
                     :
-                    <button onClick={handleClickToEditLocation} className="w-full border border-transparent hover:border hover:border-gray-300 px-2 -ml-2 text-left font-bold cursor-default">
+                    <button data-cypress="location-display" onClick={handleClickToEditLocation} className="w-full border border-transparent hover:border hover:border-gray-300 px-2 -ml-2 text-left font-bold cursor-default">
                         {userProfile?.location?.validatedLocation || 'Add location'}
                     </button>
                 }

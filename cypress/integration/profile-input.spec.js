@@ -113,4 +113,51 @@ describe('Profile input', () => {
                 .should('include.text', value.skillName);
         })
     })
+
+    it('should accept Portfolio input', () => {
+        const values = [
+            {
+                'name': 'Google',
+                'description': 'Javascript'
+            },
+            {
+                'name': 'Spotify',
+                'description': 'CSS, HTML, JS'
+            },
+            {
+                'name': 'Microsoft',
+                'description': 'Vanila JS'
+            },
+            {
+                'name': 'Facebook',
+                'description': 'ReactJS, CSS3, HTML'
+            },
+        ]
+
+        cy.get('[data-cypress=portfolio-pod] button[data-cypress=add-content]').click();
+
+        cy.get('[data-cypress=portfolio-pod] form[data-cypress=list-form]')
+            .should('be.visible');
+
+        values.forEach((value, index) => {
+            cy.get(`[data-cypress=portfolio-pod] form[data-cypress=list-form] [data-cypress=list-item-${index}] input[name=list-item-name]`)
+                .type(value.name);
+            cy.get(`[data-cypress=portfolio-pod] form[data-cypress=list-form] [data-cypress=list-item-${index}] input[name=list-item-description]`)
+                .type(value.description);
+        })
+
+        cy.get('[data-cypress=portfolio-pod] form[data-cypress=list-form] button[type=submit]').click();
+
+        // assertions
+
+        cy.get('[data-cypress=portfolio-pod] [data-cypress=list-display] [data-cypress=list-item-0] [data-cypress=list-item-name')
+            .should('include.text', values[0].name);
+        cy.get('[data-cypress=portfolio-pod] [data-cypress=list-display] [data-cypress=list-item-0] [data-cypress=list-item-description')
+            .should('include.text', values[0].description);
+
+        cy.get('[data-cypress=portfolio-pod] [data-cypress=list-display] [data-cypress=list-item-3] [data-cypress=list-item-name')
+            .should('include.text', values[3].name);
+        cy.get('[data-cypress=portfolio-pod] [data-cypress=list-display] [data-cypress=list-item-3] [data-cypress=list-item-description')
+            .should('include.text', values[3].description);
+    })
 })

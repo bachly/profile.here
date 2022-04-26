@@ -2,7 +2,7 @@
 
 This project is built using NextJS, TailwindCSS and Google Map Static API.
 
-Demo: [toptal-test.here.li](https://toptal-test.here.li).
+Demo: [https://toptal-test.vercel.app/](https://toptal-test.vercel.app/).
 
 ## Commands
 

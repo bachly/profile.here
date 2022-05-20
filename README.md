@@ -1,4 +1,4 @@
-# Profile Single Page Application
+# The Profile Page for DevMarket
 
 This project is built using NextJS, TailwindCSS, Cypress and Google Map Static API.
 

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cypress": "cypress open",
+    "cypress": "npx cypress open",
     "cypress-update-snapshot": "npx cypress run --env updateSnapshots=true"
   },
   "dependencies": {

@@ -21,7 +21,7 @@ yarn dev
 yarn cypress
 
 // Udate E2E Visual Test snapahots, while running `yarn dev` in a separate processs
-yarn cypress-udpate-snapshot
+yarn cypress-update-snapshot
 ```
 
 ## Configurations

@@ -34,3 +34,6 @@ yarn-error.log*
 # vercel
 .vercel
 .next
+
+# cypress
+__diff_output__

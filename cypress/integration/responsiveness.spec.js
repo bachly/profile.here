@@ -9,8 +9,8 @@ const sizes = [
 
 describe('Reponsiveness in empty state', () => {
     sizes.forEach((size) => {
-        it(`Should match previous screenshot 'Profile Page' When '${size}' resolution`, () => {
-            cy.setResolution(size);
+        it(`Should match the screenshot on '${size}' viewport`, () => {
+            cy.viewport(size[0], size[1]);
             cy.visit(`/`);
             cy.matchImageSnapshot();
         });

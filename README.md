@@ -17,10 +17,10 @@ yarn install
 // Run development environment locally
 yarn dev
 
-// Run E2E Visual Test
+// Run E2E Visual Test, while runing `yarn dev` in a separate processs
 yarn cypress
 
-// Udate E2E Visual Test snapahots, while running `yarn dev`
+// Udate E2E Visual Test snapahots, while running `yarn dev` in a separate processs
 yarn cypress-udpate-snapshot
 ```
 

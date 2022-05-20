@@ -1,8 +1,8 @@
-# Toptal Test of Bach Ly
+# Profile Single Page Application
 
-This project is built using NextJS, TailwindCSS and Google Map Static API.
+This project is built using NextJS, TailwindCSS, Cypress and Google Map Static API.
 
-Demo: [https://toptal-test.here.li/](https://toptal-test.here.li/).
+Demo: [https://profile.here.li/](https://profile.here.li/).
 
 ## Commands
 

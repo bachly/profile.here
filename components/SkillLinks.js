@@ -24,7 +24,7 @@ function addAlphabetGroup(skillLinks) {
     return skillLinks
 }
 
-export default function ToptalSkillLinks({ skillLinks = DEFAULT_SKILL_LINKS }) {
+export default function SkillLinks({ skillLinks = DEFAULT_SKILL_LINKS }) {
     const skillLinksWithGroup = addAlphabetGroup(skillLinks);
     const mobileNumLinksPerPage = 20;
     const mobileNumPages = parseInt(skillLinks.length / mobileNumLinksPerPage + 1);
@@ -32,7 +32,7 @@ export default function ToptalSkillLinks({ skillLinks = DEFAULT_SKILL_LINKS }) {
     return <section className="pt-8 pb-20">
         <div className="max-w-6xl mx-auto lg:px-4">
             <h2 className="font-bold text-2xl text-center">
-                Top skills on toptal
+                Top skills on DevMarket
             </h2>
 
             <div className="hidden lg:block pt-6 gap-4 columns-4">

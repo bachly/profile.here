@@ -24,14 +24,14 @@ export default function Header() {
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center justify-start">
-                            <img className="w-32" src="/img/toptal-logo-inverse.png"></img>
+                            <img className="w-32" src="/img/logo.png"></img>
                             <div className="ml-3 text-white text-xl font-bold italic text-gray-400">
                                 Exclusive access to top developers
                             </div>
                         </div>
                         <div className="flex items-center justify-end">
                             <div className="text-white text-gray-300">
-                                Join toptal as
+                                Join DevMarket as
                             </div>
                             <a className="bg-white rounded-sm text-black py-1 px-3 font-semibold uppercase tracking-wide ml-4" href="#">Developer</a>
                             <a className="bg-white rounded-sm text-black py-1 px-3 font-semibold uppercase tracking-wide ml-2" href="">Company</a>
@@ -70,7 +70,7 @@ export default function Header() {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" /></svg>
                                 <div className="sr-only">Open menu</div>
                             </button>
-                            <img className="w-32 ml-4" src="/img/toptal-logo-inverse.png"></img>
+                            <img className="w-32 ml-4" src="/img/logo.png"></img>
                             <div className="hidden sm:block ml-3 text-white text-lg font-bold italic text-gray-400">
                                 Exclusive access to top developers
                             </div>
@@ -110,7 +110,7 @@ export default function Header() {
 
                             <div className="mt-24 bg-gray-200 bg-opacity-10 text-white text-xl p-6 border border-white border-opacity-10 m-6">
                                 <div className="text-white text-gray-300 text-center">
-                                    Join toptal as
+                                    Join DevMarket as
                                 </div>
                                 <div className="flex flex-col items-center justify-center">
                                     <a className="bg-gray-300 rounded-sm text-black py-1 px-3 font-semibold uppercase tracking-wide mt-2" href="#">Developer</a>

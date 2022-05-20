@@ -1,7 +1,5 @@
-import clsx from 'clsx';
 import React from 'react'
 import Pod from '../components/Pod';
-import PodWithMap from '../components/PodWithMap';
 import ProfileImage from '../components/ProfileImage';
 import ProfileLanguages from '../components/ProfileLanguage';
 import ProfileLocation from '../components/ProfileLocation';
@@ -10,11 +8,9 @@ import ProfilePortfolio from '../components/ProfilePortfolio';
 import ProfileExperience from '../components/ProfileExperience';
 import SkillList from '../components/SkillList';
 import { UserProfileContext } from '../lib/reactContexts';
-import NavLink from '../components/NavLink';
 import SelfIntro from '../components/SelfIntro';
-import ToptalSkillLinks from '../components/ToptalSkillLinks';
+import SkillLinks from '../components/SkillLinks';
 import Header from '../components/Header';
-import PodWithNoteEditable from '../components/PodWithNoteEditable';
 import ProfileMostAmazing from '../components/ProfileMostAmazing';
 import ProfileClientRequirements from '../components/ProfileClientRequirements';
 import ProfileNote from '../components/ProfileNote';
@@ -82,17 +78,17 @@ export default function ProfilePage() {
             </UserProfileContext.Provider>
         </div>
 
-        <ToptalSkillLinks></ToptalSkillLinks>
+        <SkillLinks></SkillLinks>
 
         <div className="mt-8 bg-black pt-6 pb-8">
             <div className="max-w-4xl mx-auto px-4">
-                <div className="flex flex-wrap items-center justify-cetner">
+                <div className="flex flex-wrap items-center justify-center">
                     <h2 className="w-full lg:w-auto text-center mb-2 lg:mb-0">
-                        <span className="text-xl lg:text-2xl text-gray-500">Join the toptal community.&nbsp;</span>
+                        <span className="text-xl lg:text-2xl text-gray-500">Join the DevMarket community.&nbsp;</span>
                         <div className="block sm:hidden" />
                         <span className="text-xl lg:text-2xl text-gray-300">Apply to work with us as a</span>
                     </h2>
-                    <div className="w-full lg:w-auto hidden sm:block">
+                    <div className="mt-2 w-full lg:w-auto hidden sm:block">
                         <div className="w-full flex items-center justify-center">
                             <a href="#" className="bg-white py-3 px-6 rounded-full font-bold uppercase tracking-wide text-sm ml-2">Developer</a>
                             <span className="text-gray-600 text-2xl italic ml-2 text-light">or</span>

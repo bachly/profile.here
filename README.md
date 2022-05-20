@@ -21,7 +21,8 @@ yarn dev
 yarn cypress
 
 // Udate E2E Visual Test snapahots, while running `yarn dev` in a separate processs
-yarn cypress-update-snapshot
+// 1. Delete old snapshots
+// 2. Run `yarn cypress` and run the snapshot tests again
 ```
 
 ## Configurations

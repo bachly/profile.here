@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cypress": "npx cypress open",
-    "cypress-update-snapshot": "npx cypress run --env updateSnapshots=true"
+    "cypress": "npx cypress open"
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",

@@ -7,7 +7,7 @@ const sizes = [
     [1920, 2560],
 ];
 
-describe('Reponsiveness in empty state', () => {
+describe('Profile Page', () => {
     sizes.forEach((size) => {
         it(`Should match the screenshot on '${size}' viewport`, () => {
             cy.viewport(size[0], size[1]);

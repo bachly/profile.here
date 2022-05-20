@@ -2,7 +2,7 @@
 
 This project is built using NextJS, TailwindCSS, Cypress and Google Map Static API.
 
-Demo: [https://devmarket.vercel.app/](https://devmarket.vercel.app/).
+Demo: [https://devmarket.here.li/](https://devmarket.here.li/).
 
 ## Commands
 

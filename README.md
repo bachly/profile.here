@@ -4,6 +4,10 @@ This project is built using NextJS, TailwindCSS, Cypress and Google Map Static A
 
 Demo: [https://devmarket.vercel.app/](https://devmarket.vercel.app/).
 
+The Frontend is built with NextJS, ReactJS and TailwindCSS.
+
+The Backend includes the serverless functions running on `/api`, hosted on Vercel.
+
 ## Commands
 
 ```
@@ -16,7 +20,7 @@ yarn dev
 // Run E2E Visual Test
 yarn cypress
 
-// Udate E2E Visual Test snapahots
+// Udate E2E Visual Test snapahots, while running `yarn dev`
 yarn cypress-udpate-snapshot
 ```
 
@@ -38,10 +42,14 @@ Other custom CSS can be found in `styles/main.scss`
 
 Cypress is configured in `cypress.json`
 
+There are 2 types of Cypress tests: `integration` and `snapshots`.
+
+Integration tests are run against expected values. Snapshot tests are run against expected snapshots.
+
+Snapshots are saved in `/cypress/snapshots`.
+
+MP4 Videos are saved in `/cypress/videos`.
+
 ## Deployment
 
-The project is deployed to Vercel.
-
-```
-vercel --prod
-```
+The project is deployed to Vercel via GitHub hook.

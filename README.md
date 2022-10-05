@@ -1,4 +1,4 @@
-# A Profile Homepage for Developer
+# A Profile Landding Page for Developer
 
 This project is built using NextJS, TailwindCSS, Cypress and Google Map Static API.
 

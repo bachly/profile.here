@@ -1,4 +1,4 @@
-# The Profile Page for DevMarket
+# A Profile Homepage for Developer
 
 This project is built using NextJS, TailwindCSS, Cypress and Google Map Static API.
 

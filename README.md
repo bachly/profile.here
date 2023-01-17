@@ -1,8 +1,8 @@
-# A Profile Landding Page for Developer
+# An Editable Profile Page for Developer (Frontend only)
 
 This project is built using NextJS, TailwindCSS, Cypress and Google Map Static API.
 
-Demo: [https://devmarket.here.li/](https://devmarket.here.li/).
+Demo: [https://profile.here.li/](https://profile.here.li/).
 
 The Frontend is built with NextJS, ReactJS and TailwindCSS.
 
